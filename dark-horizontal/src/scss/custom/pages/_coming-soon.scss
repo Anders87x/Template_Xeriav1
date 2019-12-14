@@ -1,0 +1,35 @@
+// 
+// coming-soon.scss
+//
+
+.counter-number {
+    font-size: 32px;
+    font-weight: $font-weight-semibold;
+    font-family: $font-family-secondary;
+    span {
+        font-size: 15px;
+        font-weight: $font-weight-normal;
+        display: block;
+    }
+}
+
+.coming-box {
+    float: left;
+    width: 25%;
+    color: $danger;
+
+    &:nth-child(2n) {
+        color: $info;
+    }
+}
+
+.svg-rocket {
+    height: 80px;
+}
+
+.rocket-clouds__bubble,
+.rocket-clouds__cloud,
+.rocket-rocket,
+.rocket-inner__rocket-and-lines {
+    fill: $primary;
+}

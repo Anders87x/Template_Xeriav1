@@ -1,0 +1,17 @@
+// 
+// lightbox.scss
+//
+
+
+.white-popup-block {
+    background: $gray-300;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 650px;
+    margin: 40px auto;
+    position: relative;
+
+    .mfp-close {
+        color: #fff;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Xeria - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Plugin css -->
+        <link href="assets/libs/britecharts/britecharts.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html')
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Xeria</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Charts</a></li>
+                                            <li class="breadcrumb-item active">Brite Charts</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Brite Charts</h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body" dir="ltr">
+                                        <h4 class="header-title mb-4">Bar Chart</h4>
+                                        <div class="bar-container" style="width: 100%;height: 300px;"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body" dir="ltr">
+                                        <h4 class="header-title mb-4">Horizontal Bar Chart</h4>
+                                        <div class="bar-container-horizontal" style="width: 100%;height: 300px;"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+                        </div>
+                        <!-- end row-->
+    
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body" dir="ltr">
+                                        <h4 class="header-title">Brush Chart</h4>
+                                        <p>Darg on a graph and check the console to see selected data</p>
+                                        <div class="brush-container" style="width: 100%;"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body" dir="ltr">
+                                        <h4 class="header-title">Step Chart</h4>
+                                        <p>&nbsp;</p>
+                                        <div class="step-container" style="width: 100%;"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+                        </div>
+                        <!-- end row-->
+    
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body" dir="ltr">
+                                        <h4 class="header-title mb-3">Line Chart</h4>
+                                        <div class="line-container" style="width: 100%;"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+    
+                            <div class="col-xl-6">
+                                <div class="card">
+                                    <div class="card-body" dir="ltr">
+                                        <h4 class="header-title mb-4">Donut Chart</h4>
+                                        <div class="donut-container text-center" style="width: 100%;"></div>
+                                        <div class="legend-chart-container text-center"></div>
+                                    </div>
+                                    <!-- end card body-->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col-->
+                        </div>
+                        <!-- end row-->    
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- third party:js -->
+        <script src="assets/libs/d3/d3.min.js"></script>
+        <script src="assets/libs/britecharts/britecharts.min.js"></script>
+
+        <!-- Init js -->
+        <script src="assets/js/pages/britechart.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

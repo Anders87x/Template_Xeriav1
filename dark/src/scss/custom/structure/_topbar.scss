@@ -1,0 +1,278 @@
+// 
+// topbar.scss
+//
+
+// Logo
+.logo {
+    display: block;
+    line-height: $topbar-height;
+    span.logo-lg {
+        display: block;
+    }
+    span.logo-sm {
+        display: none;
+    }
+    .logo-lg-text-dark {
+        color: $dark;
+        font-weight: $font-weight-bold;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    .logo-lg-text-light {
+        color: $white;
+        font-weight: $font-weight-bold;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+}
+
+.logo-box {
+    height: $topbar-height;
+    width: $leftbar-width;
+    float: left;
+    background-color: $logo-box-background;
+    border-right: 1px solid lighten($bg-leftbar-dark,3.5%);
+}
+
+.navbar-custom {
+    background-color: $bg-topbar-light;
+    padding: 0 10px 0 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: $topbar-height;
+    z-index: 100;
+    border-bottom: 1px solid lighten($bg-topbar-light,3.5%);
+
+    .topnav-menu {
+        > li {
+            float: left;
+        }
+        .nav-link {
+            padding: 0 15px;
+            color: $gray-700;
+            min-width: 32px;
+            display: block;
+            line-height: $topbar-height;
+            text-align: center;
+            max-height: $topbar-height;
+        }
+    }
+    .dropdown.show {
+        .nav-link {
+            background-color: rgba($white,0.05);
+        }   
+    }
+
+    /* Search */
+    .app-search {
+        overflow: hidden;
+        height: $topbar-height;
+        display: table;
+        max-width: 180px;
+        margin-right: 20px;
+        
+        .app-search-box {
+            display: table-cell;
+            vertical-align: middle;
+
+            input::-webkit-input-placeholder {
+                font-size: 0.8125rem;
+                color: $gray-500;
+            }
+        }
+        .form-control {
+            border: none;
+            height: 38px;
+            padding-left: 20px;
+            padding-right: 0;
+            background-color: lighten($bg-topbar-light,3.5%);
+            box-shadow: none;
+            border-radius: 30px 0 0 30px;
+        }
+        .input-group-append {
+            margin-left: 0;
+            z-index: 4;
+        }
+
+        .btn {
+            background-color: lighten($bg-topbar-light,3.5%);;
+            border-color: transparent;
+            color: $gray-700;
+            border-radius: 0 30px 30px 0;
+            box-shadow: none !important;
+        }
+    }
+
+    .button-menu-mobile {
+        border: none;
+        color: $gray-600;
+        display: inline-block;
+        height: $topbar-height;
+        line-height: $topbar-height;
+        width: 60px;
+        background-color: transparent;
+        font-size: 24px;
+        cursor: pointer;
+
+        span {
+            width: 18px;
+            height: 2px;
+            background-color: $gray-600;
+            display: block;
+            margin: 5px 12px;
+
+            &:nth-of-type(2) {
+                width: 24px;
+            }
+        }
+    }
+    
+    .button-menu-mobile.disable-btn {
+        display: none;
+    }
+}
+
+
+/* Notification */
+.noti-scroll {
+    max-height: 230px;
+}
+
+.notification-list {
+    margin-left: 0;
+
+    .noti-title {
+        background-color: $gray-300;
+        padding: 15px 20px;
+        margin-top: -$dropdown-padding-y;
+    }
+
+    .noti-icon {
+        font-size: 21px;
+        vertical-align: middle;
+    }
+
+    .noti-icon-badge {
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-size: 12px;
+    }
+
+    .notify-item {
+        padding: 12px 20px;
+
+        .notify-icon {
+            float: left;
+            height: 36px;
+            width: 36px;
+            font-size: 18px;
+            line-height: 36px;
+            text-align: center;
+            margin-right: 10px;
+            border-radius: 50%;
+            color: $white;
+        }
+
+        .notify-details {
+            margin-bottom: 5px;
+            overflow: hidden;
+            margin-left: 45px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: $gray-800;
+            font-family: $font-family-secondary;
+
+            b {
+                font-weight: 500;
+            }
+            small {
+                display: block;
+            }
+            span {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 13px;
+            }
+        }
+        
+        .user-msg {
+            margin-left: 45px;
+            white-space: normal;
+            line-height: 16px;
+        }
+    }
+    .profile-dropdown {
+        .notify-item {
+            padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+        }
+    }
+}
+
+.profile-dropdown {
+    width: 170px;
+    i {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+.nav-user {
+    padding: 0 12px !important;
+    img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+// Topbar dark
+
+.topbar-dark {
+    .navbar-custom {
+        background-color: $bg-topbar-dark !important;
+        
+        .topnav-menu {
+            .nav-link {
+                color: rgba($white,0.8);
+            }
+        }
+        .dropdown.show {
+            .nav-link {
+                background-color: rgba($white,0.1);
+            }   
+        }
+    
+        .button-menu-mobile {
+            span {
+                background-color: rgba($white,0.8);
+            }
+        }
+
+        .waves-effect{
+            .waves-ripple {
+                background: rgba($white, 0.4);
+                background: radial-gradient(rgba($white, 0.2) 0, rgba($white, 0.3) 40%, rgba($white, 0.4) 50%, rgba($white, 0.5) 60%, rgba($white, 0) 70%);
+            }
+        }
+    
+        /* Search */
+        .app-search {
+            input::-webkit-input-placeholder {
+                color: $gray-700 !important;
+            }
+            .form-control {
+                color: $white;
+                background-color: lighten($bg-topbar-dark,7.5%);
+                border-color: $gray-100;
+            }
+            .btn {
+                background-color: lighten($bg-topbar-dark,7.5%);
+                color: rgba($white, 0.5);
+            }
+        }
+    }
+}

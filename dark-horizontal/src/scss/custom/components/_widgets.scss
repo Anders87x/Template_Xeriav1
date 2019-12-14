@@ -1,0 +1,145 @@
+// 
+// widgets.scss
+//
+
+// Simple tile box
+.widget-flat {
+    position: relative;
+    overflow: hidden;
+
+    i.widget-icon {
+        font-size: 36px;
+    }
+}
+
+// Widget with User
+.widget-user {
+    position: relative;
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .user-position {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 44px;
+        font-size: 16px;
+        text-align: center;
+        right: 0;
+        left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        span {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.dash-item-overlay {
+    position: absolute;
+    left: 8%;
+    max-width: 350px;
+    padding: 20px;
+    z-index: 1;
+}
+
+
+// Inbox-widget(Used Profile)
+.inbox-widget {
+    .inbox-item {
+        border-bottom: 1px solid $gray-200;
+        overflow: hidden;
+        padding: 0.625rem 0;
+        position: relative;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        .inbox-item-img {
+            display: block;
+            float: left;
+            margin-right: 15px;
+            width: 40px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        .inbox-item-author {
+            color: $gray-800;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .inbox-item-text {
+            display: block;
+            font-size: 0.8125rem;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .inbox-item-date {
+            font-size: 0.6875rem;
+            position: absolute;
+            right: 5px;
+            top: 10px;
+        }
+    }
+}
+
+
+// CTA
+
+.cta-box {
+    background-image: url(../images/bg-pattern-2.png);
+    background-size: cover;
+
+    .cta-box-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+// Timeline
+.timeline-alt {
+    position: relative;
+    
+    .timeline-item {
+        position: relative;
+
+        &:before {
+            background-color: $gray-300;
+            bottom: 0;
+            content: "";
+            left: 5px;
+            position: absolute;
+            top: 3px;
+            width: 2px;
+            z-index: 0;
+        }
+
+        .timeline-icon {
+            float: left;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: $gray-200;
+            color: $dark;
+            margin-top: 3px;
+            border: 2px solid $gray-300;
+            z-index: 1;
+            position: relative;
+        }
+        .timeline-item-info {
+            margin-left: 25px;
+        }
+    }
+}

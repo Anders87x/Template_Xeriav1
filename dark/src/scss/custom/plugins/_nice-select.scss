@@ -1,0 +1,41 @@
+//
+// nice-select.scss
+//
+
+[data-plugin="customselect"] {
+    display: none;
+}
+
+.nice-select {
+    line-height: 36px;
+    height: 38px;
+    border-color: $input-border-color;
+    border-radius: $input-border-radius;
+    background-color: $input-bg;
+    @include font-size($input-font-size);
+
+    &:hover {
+        border-color: $input-focus-border-color;
+    }
+
+    .list {
+        color: $dropdown-link-color;
+        background-color: $dropdown-bg;
+    }
+    .option:hover, .option.focus, .option.selected.focus {
+        color: $dropdown-link-hover-color;
+        @include gradient-bg($dropdown-link-hover-bg);
+    }
+    .option.disabled {
+        background-color: transparent;
+    }
+}
+
+.nice-select.open, .nice-select:active, .nice-select:focus {
+    border-color: $input-focus-border-color;
+}
+
+.nice-select.small {
+    height: 32px;
+    line-height: 30px;
+}

@@ -1,0 +1,293 @@
+// 
+// topbar.scss
+//
+
+// Logo
+.logo {
+    display: block;
+    line-height: $topbar-height;
+    span.logo-lg {
+        display: block;
+    }
+    span.logo-sm {
+        display: none;
+    }
+    .logo-lg-text-dark {
+        color: $dark;
+        font-weight: $font-weight-bold;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    .logo-lg-text-light {
+        color: $white;
+        font-weight: $font-weight-bold;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+}
+
+.logo-box {
+    height: $topbar-height;
+    float: left;
+    padding-right: 40px;
+    padding-left: 12px;
+}
+
+.navbar-custom {
+    background-color: $bg-topbar-light;
+    padding: 0 10px 0 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: $topbar-height;
+    z-index: 100;
+
+    .topnav-menu {
+        > li {
+            float: left;
+        }
+        .nav-link {
+            padding: 0 15px;
+            color: $gray-700;
+            min-width: 32px;
+            display: block;
+            line-height: $topbar-height;
+            text-align: center;
+            max-height: $topbar-height;
+        }
+    }
+    .dropdown.show {
+        .nav-link {
+            background-color: rgba($white,0.05);
+        }   
+    }
+
+    .dropdown-menu {
+        border-radius: 0 0 $dropdown-border-radius $dropdown-border-radius;
+    }
+
+    /* Search */
+    .app-search {
+        overflow: hidden;
+        height: $topbar-height;
+        display: table;
+        max-width: 180px;
+        margin-right: 20px;
+        
+        .app-search-box {
+            display: table-cell;
+            vertical-align: middle;
+
+            input::-webkit-input-placeholder {
+                font-size: 0.8125rem;
+                color: rgba($white,0.5);
+            }
+        }
+        .form-control {
+            border: none;
+            height: 38px;
+            padding-left: 20px;
+            padding-right: 0;
+            background-color: lighten($bg-topbar-light,5%);
+            box-shadow: none;
+            border-radius: 30px 0 0 30px;
+        }
+        .input-group-append {
+            margin-left: 0;
+            z-index: 4;
+        }
+
+        .btn {
+            background-color: lighten($bg-topbar-light,5%);
+            border-color: transparent;
+            color: $gray-700;
+            border-radius: 0 30px 30px 0;
+            box-shadow: none !important;
+        }
+    }
+
+    .button-menu-mobile {
+        border: none;
+        color: $dark;
+        display: inline-block;
+        height: $topbar-height;
+        line-height: $topbar-height;
+        width: 60px;
+        background-color: transparent;
+        font-size: 24px;
+        cursor: pointer;
+
+        span {
+            width: 18px;
+            height: 2px;
+            background-color: $dark;
+            display: block;
+            margin: 5px 12px;
+
+            &:nth-of-type(2) {
+                width: 24px;
+            }
+        }
+    }
+    
+    .button-menu-mobile.disable-btn {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    body {
+        padding-bottom: 80px;
+    }
+
+    .pro-user-name {
+        display: none;
+    }
+    .navbar-custom {
+        padding: 0 0 0 ($grid-gutter-width / 2);
+    }
+
+    .logo-box {
+        padding-right: 0;
+        padding-left: 0;
+
+        .logo-lg {
+            display: none !important;
+        }
+        .logo-sm {
+            display: block !important;
+        }
+    }
+}
+
+
+/* Notification */
+.noti-scroll {
+    max-height: 230px;
+}
+
+.notification-list {
+    margin-left: 0;
+
+    .noti-title {
+        background-color: $dropdown-bg;
+        padding: 15px 20px;
+        margin-top: -$dropdown-padding-y;
+    }
+
+    .noti-icon {
+        font-size: 21px;
+        vertical-align: middle;
+    }
+
+    .noti-icon-badge {
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-size: 12px;
+    }
+
+    .notify-item {
+        padding: 12px 20px;
+
+        .notify-icon {
+            float: left;
+            height: 36px;
+            width: 36px;
+            font-size: 18px;
+            line-height: 36px;
+            text-align: center;
+            margin-right: 10px;
+            border-radius: 50%;
+            color: $white;
+        }
+
+        .notify-details {
+            margin-bottom: 5px;
+            overflow: hidden;
+            margin-left: 45px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: $gray-800;
+            font-family: $font-family-secondary;
+
+            b {
+                font-weight: 500;
+            }
+            small {
+                display: block;
+            }
+            span {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 13px;
+            }
+        }
+        
+        .user-msg {
+            margin-left: 45px;
+            white-space: normal;
+            line-height: 16px;
+        }
+    }
+    .profile-dropdown {
+        .notify-item {
+            padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+        }
+    }
+}
+
+.profile-dropdown {
+    width: 170px;
+    i {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+.nav-user {
+    padding: 0 12px !important;
+    img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+// Topbar dark
+
+.topbar-dark {
+    .navbar-custom {
+        background-color: $bg-top-navbar-dark !important;
+        
+        .topnav-menu {
+            .nav-link {
+                color: $gray-500;
+            }
+        }
+    
+        .button-menu-mobile {
+            span {
+                background-color: $gray-600;
+            }
+        }
+    
+        /* Search */
+        .app-search {
+            input::-webkit-input-placeholder {
+                color: rgba($white,0.2) !important;
+            }
+            .form-control {
+                color: $white;
+                background-color: $gray-300;
+                border-color: $gray-600;
+            }
+            .btn {
+                background-color: $gray-300;
+                color: $gray-500;
+            }
+        }
+    }
+}
