@@ -33,7 +33,7 @@
   "dependencies": {
     "RWD-Table-Patterns": "^5.3.3",
     "admin-resources": "git+https://github.com/coderthemes/admin-resources#master",
-    "apexcharts": "^3.6.2",
+    "apexcharts": "^3.24.0",
     "autonumeric": "^1.9.39",
     "bootstrap": "^4.3.1",
     "bootstrap-colorpicker": "^3.0.3",
